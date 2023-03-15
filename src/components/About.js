@@ -9,10 +9,12 @@ function About() {
 			<img
 				className="absolute h-[129px] z-10 right-[50%] top-[124px] tablet:top-[89px] tablet:right-[70%] "
 				src="/pattern-rings.svg"
+				alt="pattern-ring icon"
 			/>
 			<img
 				className="absolute z-50 h-[129px] top-[254px] right-[-65px] tablet:top-[487px] desktop:right-[39%]"
 				src="/pattern-circle.svg"
+				alt="patern-circle icon"
 			/>
 			<div className="flex relative z-40 flex-col items-center mb-[80px] tablet:mb-0 tablet:flex-row-reverse">
 				<img

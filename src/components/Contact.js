@@ -26,7 +26,7 @@ function Contact() {
 			<div className="flex relative justify-center bg-inherit pt-[60px] tablet:pt-[60px] desktop:pt-[80px]">
 				<div className="z-20 bg-transparent max-w-[445px] desktop:grid desktop:grid-cols-2 desktop:gap-[110px] desktop:max-w-full largedesktop:gap-[220px]">
 					<div className="bg-inherit">
-						<h1 className="font-bold text-center bg-inherit desktop:text-left text-[40px] mb-[20px] leading-[-1.14px] tablet:text-[72px] tablet:leading-[-2.05px]">
+						<h1 className="font-bold text-center bg-inherit desktop:text-left text-[40px] mb-[20px] leading-[-1.14px] tablet:text-[72px] tablet:leading-[72px] desktop:text-[88px] desktop:leading-[88px]">
 							Contact
 						</h1>
 						<p className="text-center font-medium bg-inherit desktop:text-left leading-[26px] mb-[50px] tablet:text-[18px] tablet:leading-[28px28px] text-[#d9d9d9]">

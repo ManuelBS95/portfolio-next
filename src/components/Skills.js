@@ -10,7 +10,7 @@ function Skills() {
 				{skills.map((item) => {
 					return (
 						<div key={item.skill}>
-							<p className="font-bold text-[32px] leading-[-1px]">
+							<p className="font-bold text-[32px] leading-[40px] tablet:text-[48px] tablet:leading-[56px]">
 								{item.skill}
 							</p>
 							<p className="font-medium">{item.experience}</p>
