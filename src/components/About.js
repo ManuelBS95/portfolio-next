@@ -4,9 +4,17 @@ function About() {
 	return (
 		<section
 			id="about"
-			className="px-4 tablet:px-8 desktop:px-[70px] largedesktop:px-[165px]"
+			className="overflow-hidden relative px-4 tablet:px-8 desktop:px-[70px] largedesktop:px-[165px]"
 		>
-			<div className="flex flex-col items-center mb-[80px] tablet:mb-0 tablet:flex-row-reverse">
+			<img
+				className="absolute h-[129px] z-10 right-[50%] top-[124px] tablet:top-[89px] tablet:right-[70%] "
+				src="/pattern-rings.svg"
+			/>
+			<img
+				className="absolute z-50 h-[129px] top-[254px] right-[-65px] tablet:top-[487px] desktop:right-[39%]"
+				src="/pattern-circle.svg"
+			/>
+			<div className="flex relative z-40 flex-col items-center mb-[80px] tablet:mb-0 tablet:flex-row-reverse">
 				<img
 					className="h-auto mb-[40px] w-[174px] tablet:hidden"
 					src="/image-profile-mobile.webp"
@@ -23,7 +31,7 @@ function About() {
 					alt="profile"
 				/>
 				<div className="">
-					<div className="z-20 text-center bg-transparent tablet:pl-8 desktop:top-[198px] desktop:pl-[70px] largedesktop:pl-[165px] tablet:absolute tablet:h-[600px] tablet:top-[151px] tablet:left-0 tablet:w-[480px] tablet:text-start">
+					<div className="z-20 text-center bg-transparent desktop:top-[198px] tablet:absolute tablet:h-[600px] tablet:top-[151px] tablet:left-0 tablet:w-[480px] tablet:text-start">
 						<div className="mb-6 font-bold largedesktop:mb-[43px] text-[40px] tablet:hidden desktop:text-[88px] desktop:leading-[88px] desktop:block bg-inherit tracking-[-1.14px] leading-[40px] desktop:w-[730px]">
 							Nice to meet you! I&apos;m{" "}
 							<span className="border-b-[4px] inline-block bg-inherit border-b-[#4ee1a0]">
