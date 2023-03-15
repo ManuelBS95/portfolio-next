@@ -6,8 +6,8 @@ Frontend Mentor - Single-page developer portfolio
 
 ## Links
 
-- Solution URL: [Github](https://github.com/ManuelBS95/github-user-search)
-- Live Site URL: [Github Pages](https://manuelbs95.github.io/github-user-search/)
+- Solution URL: [Github](https://github.com/manuelbenites/portfolio-next)
+- Live Site URL: [Vercel](https://portfolio-next-gamma.vercel.app/)
 
 ## Build with
 
