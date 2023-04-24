@@ -67,9 +67,9 @@ function Contact() {
 						</div>
 						<div className="flex justify-end bg-transparent">
 							<button className="h-[38px] text-[#d9d9d9] inline-block bg-inherit border-b-[2px] border-b-[#4ee1a0] hover:text-[#4ee1a0]">
-								<p className="font-bold uppercase text-[16px] leading-[26px] tracking-[2.29px] bg-inherit">
+								<span className="font-bold uppercase text-[16px] leading-[26px] tracking-[2.29px] bg-inherit">
 									send message
-								</p>
+								</span>
 							</button>
 						</div>
 					</form>
