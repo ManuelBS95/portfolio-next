@@ -1,12 +1,12 @@
-import GithubIcon from "./GithubIcon.js"
-import LinkedinIcon from "./LinkedinIcon.js"
-import FrontendMentorIcon from "./FrontendMentorIcon.js"
-import TwitterIcon from "./TwitterIcon.js"
+import GithubIcon from "./icons/GitHubIcon"
+import LinkedinIcon from "./icons/LinKedinIcon"
+import FrontendMentorIcon from "./icons/FrontendMentorIcon"
+import TwitterIcon from "./icons/TwitterIcon"
 import Link from "next/link"
 
 function Links() {
 	return (
-		<div className="flex z-10 bg-transparent">
+		<div className="flex bg-transparent">
 			<Link href="/" className="bg-inherit">
 				<GithubIcon className="mx-[12.8px] bg-inherit fill-white hover:fill-[#4ee1a0]" />
 			</Link>

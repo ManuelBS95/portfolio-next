@@ -1,20 +1,50 @@
 import { useState } from "react"
+const TIMEOUT = 2000
 
 function Contact() {
-	const [email, setEmail] = useState()
-	const [error, setError] = useState("")
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		message: "",
+	})
+	const [errorName, setErrorName] = useState("")
+	const [errorEmail, setErrorEmail] = useState("")
+	const [errorMessage, setErrorMessage] = useState("")
 
 	const handleChange = (e) => {
-		e.preventDefault()
-		setEmail(e.target.value)
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value,
+		})
 	}
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		if (!email || email.length === 0) {
-			setError("Email cannot be empty")
-		} else if (!/@/.test(email)) {
-			setError("Sorry, invalid format here")
+
+		if (!formData.name) {
+			setErrorName("Please, enter a name")
+			setTimeout(() => {
+				setErrorName("")
+			}, TIMEOUT)
+		}
+
+		if (!formData.email || formData.email.length === 0) {
+			setErrorEmail("Email cannot be empty")
+			setTimeout(() => {
+				setErrorEmail("")
+			}, TIMEOUT)
+		} else if (!/@/.test(formData.email)) {
+			setErrorEmail("Sorry, invalid format here")
+			setTimeout(() => {
+				setErrorEmail("")
+			}, TIMEOUT)
+		}
+
+		if (!formData.message) {
+			setErrorMessage("Please, enter a message")
+			setTimeout(() => {
+				setErrorMessage("")
+			}, TIMEOUT)
 		}
 	}
 
@@ -41,29 +71,40 @@ function Contact() {
 					>
 						<div className="relative h-[63px] bg-inherit">
 							<input
-								className="py-2 px-4 w-full uppercase outline-none border-b-[1px] bg-inherit placeholder:uppercase"
+								className="py-2 px-4 w-full uppercase outline-none border-b-[1px] focus:border-[#4ee1a0] bg-inherit placeholder:uppercase"
 								placeholder="name"
+								autoComplete="off"
 								name="name"
+								onChange={handleChange}
 							/>
+							<label className="absolute right-0 bottom-0 font-bold text-[#FF6F5B] text-[12px]">
+								{errorName}
+							</label>
 						</div>
 						<div className="relative h-[63px] bg-inherit">
 							<input
-								className="py-2 px-4 w-full uppercase outline-none border-b-[1px] bg-inherit placeholder:uppercase"
+								className="py-2 px-4 w-full uppercase outline-none border-b-[1px] focus:border-[#4ee1a0] bg-inherit placeholder:uppercase"
 								placeholder="email"
+								autoComplete="off"
 								name="email"
 								onChange={handleChange}
 							/>
 							<label className="absolute right-0 bottom-0 font-bold text-[#FF6F5B] text-[12px]">
-								{error}
+								{errorEmail}
 							</label>
 						</div>
-						<div className="relative border-b-[1px] mb-[32px] bg-inherit">
+						<div className="relative min-h-[140px] mb-[32px] bg-inherit">
 							<textarea
 								rows="4"
-								className="overflow-hidden py-2 px-4 w-full uppercase outline-none bg-inherit placeholder:uppercase"
+								className="overflow-hidden py-2 px-4 w-full uppercase outline-none border-b-[1px] focus:border-[#4ee1a0] bg-inherit placeholder:uppercase"
 								placeholder="message"
+								autoComplete="off"
 								name="message"
+								onChange={handleChange}
 							/>
+							<label className="absolute right-0 bottom-0 font-bold text-[#FF6F5B] text-[12px]">
+								{errorMessage}
+							</label>
 						</div>
 						<div className="flex justify-end bg-transparent">
 							<button className="h-[38px] text-[#d9d9d9] inline-block bg-inherit border-b-[2px] border-b-[#4ee1a0] hover:text-[#4ee1a0]">

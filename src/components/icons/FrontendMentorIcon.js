@@ -1,5 +1,3 @@
-import * as React from "react"
-
 const FrontendMentorIcon = (props) => (
 	<svg xmlns="http://www.w3.org/2000/svg" width={26} height={23} {...props}>
 		<path
